@@ -18,7 +18,7 @@ const bmiValue = computed ( () => {
 //Why doen't they keep their values when used in the components??????????? 
 
 
-return {
+return {//need a return statement in order to transfer  the variables frrom the store with their value intact
 
     height,
     weight,

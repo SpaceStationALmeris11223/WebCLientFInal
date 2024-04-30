@@ -3,7 +3,7 @@ import {useBmiStore} from '../Store/BMI-Stores.js'
 import {storeToRefs} from  'pinia'
 
 
-const bmiStore = useBmiStore
+const bmiStore = useBmiStore()
 const{height, weight} = storeToRefs(bmiStore)
 
 
