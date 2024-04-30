@@ -1,9 +1,10 @@
 <script setup>
-import {useBMIStore} from '../Store/BMI-Stores.js'
+import {useBmiStore} from '../Store/BMI-Stores.js'
 import {storeToRefs} from  'pinia'
 
 
-
+const bmiStore = useBmiStore
+const{height, weight} = storeToRefs(bmiStore)
 
 
 </script>
@@ -18,18 +19,13 @@ import {storeToRefs} from  'pinia'
 
 <div>
 
-    <label for="your-height">Enter your height in {{heightMeasurement}}   </label>
+    <label for="your-height">Enter your height in meters   </label>
     <input min="0" v-model="height" id="your-height" name="your-height" type="number">
     <br>
-    <label for="your-weight">Enter your weight in {{weightMeasurement}}  </label>
+    <label for="your-weight">Enter your weight in kilograms  </label>
     <input min="0" v-model="weight" id="your-weight" name="your-weight" type="number">
-  
-        <p>
-            You are measuring in {{ heightMeasurement }} and {{ weightMeasurement }}
-        </p>
-    <p>
-        <button @click="sendDataToApp">calculate</button> <!--Let's start using @click more, it's more convient-->
-    </p>
+
+
 </div>
 
 

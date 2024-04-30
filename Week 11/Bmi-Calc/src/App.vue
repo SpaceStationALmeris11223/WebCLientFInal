@@ -1,20 +1,19 @@
 <script setup>
-import BMIDisplay from './components/BMIDisplay.vue';
-import BMICalculation from './components/BMI-Calculation.vue';
+
+import BMIInputs from './components/BMIInputs.vue';
 import {useBmiStore} from './Store/BMI-Stores'
 import {storeToRefs} from 'pinia'
 
-const useStore = useBmiStore()
-let {calculate} = storeToRefs(useStore)
+const bmiStore = useBmiStore()
+let {bmiValue} = storeToRefs(bmiStore)
 
 </script>
 
 <template>
 
 
-<BMIDisplay> </BMIDisplay>
-<BMICalculation v-on:userInputData="calculate"> </BMICalculation>
-
+<BMIInputs> </BMIInputs>
+Your BMI is:  {{ bmiValue}}
 
 
 </template>

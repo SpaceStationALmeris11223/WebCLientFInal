@@ -52,7 +52,7 @@ function addStudent(){
         
 <div id="new-student-form" class="card add-student m-2 p-2">
     <h4 class="card-title">Add new student</h4>
-    <h5>{{studentCount}} students in class.</h5>
+
 
     <div class="form-group mb-3">
         <label for="name">Name</label>
