@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+
+
+import {ref,watch} from'vue'
+//This tells the app what data to expect
+const height = 0
+const weight = 0
+
+
+function calculate =(height,weight){
+const bmi = weight/ (height*height)
+bmiValue.value = ref(bmi.toPrecision(3))
+console.log(bmiValue.value)
+}
+
+</script>
+
+
+<body>
+<div>
+<label for="your-height">Enter your height in meters</label>
+<input type="number" min="0"
+ id="your-height" name="your-height">
+<br>
+<label for="your-weight">Enter your weight in kilograms</label>
+<input type="number" min="0" name="your-weight" id="your-weight">
+
+<p>
+    <button type="submit" onclick="calculate"> calculate </button>
+</p>
+<p>{{bmiValue}}</p>
+</div>
+</body>

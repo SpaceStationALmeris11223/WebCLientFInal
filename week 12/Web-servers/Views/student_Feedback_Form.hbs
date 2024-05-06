@@ -1,0 +1,46 @@
+
+    <div class=" header bg-secondary-subtle p-3 mb-5">
+        <h1 class="py-4">Please provide feedback. You may do so anonymously.</h1>
+    </div>
+
+
+
+
+<div class="row"> <!-- New div for the row-->
+    <div class="col-md-6 ">
+        <h2> Instructions</h2> 
+
+        <p> As one of our students your thoughts and feedback are important.</p>
+        <p>Please send them using this form.</p>
+        <p>if you would like us to follow up with you please provide your contact information.</p> </h2>
+    </div><!--New div col for instructions-->
+
+
+
+    <!--All the questions for the form are right here-->
+    <div class="col-sm-6"> <!-- New second col for form-->
+        <form action="/submit-feedback" method="post">
+        <label class="form-label" for="Name"> Name</label> <input id="name" name="name" class="form-control"> <br>
+        <!-- EMail down below-->
+        <label class="form-label" for="Email"> Email:</label> <input id="email" class="form-control" name="email" type="email"><br>
+        <!-- Comments down below--> Comments <br>
+        <label class="form-label" for="Comments"></label><textarea name="comments" id="Student-Comments" class="form-control" cols="30" rows="10" required></textarea><br>
+        <!--Active student check below-->
+        <label for="Active-Student?">Are you an active student? </label for="Comments?"> <br> 
+        <!-- Yes am student down below-->
+        <div class="form-check">
+            <input name="current-student" type="radio" value="yes" class="form-check-input"> Yes 
+            <label for="Yes" class="form-check-label"></label>
+        </div>
+            <!--No not a student-->
+        <div class="form-check">
+            <input name="current-student" value="no" type="radio" class="form-check-input"> No <br>
+            <label for="No" class="form-check-label"></label>
+        </div>
+    <input class="btn btn-success mt-2" type="submit">
+    </form>   
+    </div> <!-- end of second div col for form-->
+
+
+
+</div> <!--End of row div-->
