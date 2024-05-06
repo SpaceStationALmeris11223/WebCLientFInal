@@ -1,6 +1,6 @@
 const express = require('express') // require takes place of import in js libraries
 const path = require('path')//used to connecton locations on your computer to find the files
-
+const bodyParser = require('body-parser')
 
 const indexRouter = require('./routes/index.js')
 
@@ -8,7 +8,8 @@ const app = express()// create the web application server
 
 //enables parsing of POST request body
 
-
+//enable parsing of post request body
+app.use(bodyParser.urlencoded({extended:false}))
 
 app.set('views', path.join(__dirname, 'views'))//__dirname = the directory where the data is stored ( think cd/ in cmd)
 //     the file name ------------------>where that file is

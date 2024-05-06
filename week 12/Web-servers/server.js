@@ -8,7 +8,7 @@ const app = express()// create the web application server
 //enables parsing of POST request body
 app.use(bodyparser.urlencoded({extended: false}))
 
-app.set('views', path.join(__dirname, 'views'))//__dirname = the diretrory where the data is stored ( think cd/ in cmd)
+app.set('views', path.join(__dirname, 'views'))//__dirname = the directory where the data is stored ( think cd/ in cmd)
 //     the file name ------------------>where that file is
 app.set('view engine', 'hbs')//uses handlebars to generate views
 

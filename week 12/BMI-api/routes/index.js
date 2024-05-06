@@ -12,10 +12,18 @@ router.get('/', function(req, res, next){
 
 })
 
-router.get('/bmicalc', function(req, res, next){
-    res.render('bmi-Calc.hbs')
-})
 
+
+router.post('/FetchCalc', function(req,res,next){
+    const formdata = req.body // so it can catch the post request
+    console.log(formdata)
+
+
+    res.render('BmiOutput',{
+        calculate: formdata.calculate
+    
+    })
+})
 
 module.exports = router //return this router obj to whaterver needs this file
 //this file must always be at the bottom
