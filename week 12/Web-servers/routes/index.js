@@ -28,7 +28,7 @@ router.post('/submit-feedback', function(req,res,next){
 //
 
 
-console.log(formdata['current-student'] )
+console.log(formdata['current-student'] )//this dictates what data to keep from the formdata 
   res.render('thank-you', {
     name: formdata.name,
     email: formdata.email,
