@@ -18,18 +18,20 @@ onMounted( () =>{
 </script>
 
 <template>
-
+<h1>Student Sign In</h1>
     <!--HTML template here-->
 <!--You can reorder the table by moving around the components below this text-->
 <NewStudentForm>  </NewStudentForm>
 <StudentTable>  </StudentTable>
 <StudentMessage>  </StudentMessage>
-<!--You can reorder table by moving around the components above this text-->
+<!--You can reorder table byy moving around the components above this text-->
 
 </template>
 
 
 <style scoped>
-
+ h1 {
+    margin:  10px;
+ }
 /*css for thid componet here*/
 </style>

@@ -1,13 +1,13 @@
 {
-"development":{
-    "storage":"student.sqlite",
-    "dialect": "sqlite"
-},
-"production":{
-    "username": "Your_username",
-    "host": "Your_database_server.database.windows.net",
-    "database": "Your_Database",
-    "dialect": "mssql"
-}
+    "development":{
+        "storage":"student.sqlite",
+        "dialect": "sqlite"
+    },
+    "production":{
+        "username": "Avery",
+        "host": "student-sign-in-database-server-ah.database.windows.net",
+        "database": "Student-Sign-In-Database",
+        "dialect": "mssql"
+    }
 
 }

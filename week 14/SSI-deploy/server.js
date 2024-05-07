@@ -1,7 +1,13 @@
 const express = require('express')
 const apiRoutes = require('./routes/api')
+const path = require('path')
 
 const app = express()
+
+const staticFilePath = path.join(__dirname, 'client', 'dist') //client and dist are directorys
+const staticFiles = express.static(staticFilePath)
+app.use('/', staticFiles)//request home page to server static files
+
 
 app.use(express.json())
 
@@ -9,7 +15,7 @@ app.use('/api',apiRoutes)
 
 app.use(function(req,res,next){
     //can find matching route error handler
-    res.status(404).send('Sorry route not found (check URl for spelling errors)')
+    res.status(404).send('Sorry page not found (check URl for spelling errors)')
 })
 
 

@@ -11,8 +11,11 @@ const env = process.env.NODE_ENV|| "development" //second half of this code says
 const config = configJson[env] 
 //the line above reads the configuratoon objectg for development or production based on what the env value is
 
+
+const dbPassword = process.env.DB_PASSWORD
 const sequelize = new Sequelize(config)
 
+config.password = dbPassword
 const database = {
     sequelize: sequelize,//This is the object that has the config of how to connect to the database
     Sequelize: Sequelize//This is the Sequlize library
